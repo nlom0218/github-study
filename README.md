@@ -25,3 +25,4 @@
 
 ## 합쳐진 공용 저장소 불러오기
 * [ ] git pull (명령어)
+* [ ] git push (명령어 / This branch is 1 commit behind main. 해결방법 / 새롭게 만든 Branch에서)
