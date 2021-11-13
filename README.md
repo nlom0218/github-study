@@ -1,4 +1,4 @@
-#Github Study
+# Github Study
 --------
 
 ## 초대하기
