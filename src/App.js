@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 function App() {
+  useEffect(() => {
+    window.alert("안녕!")
+  })
   return (
     <div className="App">
       <div>음식</div>
