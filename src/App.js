@@ -3,9 +3,7 @@ import React, { useEffect } from 'react';
 function App() {
   useEffect(() => {
     window.alert("안녕!")
-    window.alert("반가워!")
   })
-  console.log("음...");
   return (
     <div className="App">
       <div>음식</div>
