@@ -13,6 +13,7 @@ function App() {
         <li>피자</li>
         <li>치킨</li>
         <li>짜장면</li>
+        <li>라면</li>
       </ul>
     </div>
   );
