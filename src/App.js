@@ -14,6 +14,7 @@ function App() {
         <li>치킨</li>
         <li>짜장면</li>
         <li>라면</li>
+        <li>떡볶이</li>
       </ul>
     </div>
   );
