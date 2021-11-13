@@ -1,4 +1,4 @@
 #Github Study
 --------
-[] git init
-[] git clone git_path
+[ ] git init
+[ ] git clone git_path
