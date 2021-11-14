@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Kimoo = () => {
-  return <Div>김우일</Div>;
+  return <Div>김우일dddd</Div>;
 };
 
 const Div = styled.div({
