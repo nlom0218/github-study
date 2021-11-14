@@ -28,8 +28,8 @@ const Container = styled.div({
 const Btn = styled.button`
   width: 20;
   height: 40;
-  padding: 10px;
-  margin: 10px;
+  padding: 10px 20px;
+  margin: 5px;
   color: white;
   background-color: black;
   border: none;
@@ -56,6 +56,10 @@ const Kimoo = () => {
     setCnt((x) => x + 1);
   };
 
+  const minus = () => {
+    setCnt((x) => x - 1);
+  };
+
   const makeZero = () => {
     setCnt((x) => (x = 0));
   };
@@ -66,8 +70,9 @@ const Kimoo = () => {
       <Container>
         <Title>숫자 세기</Title>
         <Number>{cnt}</Number>
-        <Btn onClick={plus}>누르세요!</Btn>
-        <Btn onClick={makeZero}>0으로</Btn>
+        <Btn onClick={plus}>+</Btn>
+        <Btn onClick={makeZero}>0</Btn>
+        <Btn onClick={minus}>-</Btn>
       </Container>
     </React.Fragment>
   );
