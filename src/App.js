@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, Route, Router, Routes } from 'react-router-dom';
 import styled from 'styled-components';
+import Header from './Components/Header';
 import Home from './Pages/Home';
 
 const Container = styled.div`
