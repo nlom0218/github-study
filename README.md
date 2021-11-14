@@ -16,7 +16,7 @@
 ## 나의 코드 저장하고 저장소에 올리기
 * [x] git add . (명령어)
 * [x] git commit -m "commit info" (명령어)
-* [x] git push (명령어)
+* [x] git push origin branch_name(명령어)
 
 ## 공용 저장소에 내 코드 병합 요청하기
 * [x] Compare & pull request (깃허브)
