@@ -16,6 +16,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/1" element={<Kimoo />} />
       <Route path="/3" element={<Three />} />
+      <Route path="/4" element={<hi />} />
     </Routes>
   );
 }
