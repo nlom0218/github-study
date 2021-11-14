@@ -15,6 +15,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/1" element={<Kimoo />} />
+      <Route path="/4" element={<hi />} />
     </Routes>
   );
 }
