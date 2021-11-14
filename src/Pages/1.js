@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Header from "../Components/Header";
 
 // const Container = styled.div({
 //   // display: "flex",
@@ -13,12 +14,63 @@ import styled from "styled-components";
 //   // backgroundColor: "white",
 // });
 
-const Container = styled.div`
-  display: flex;
-`
+const Container = styled.div({
+  width: 200,
+  backgroundColor: "hotpink",
+  color: "white",
+  borderRadius: "10%",
+  padding: 20,
+  margin: 10,
+  boxShadow: "5px 5px 5px gray",
+  textShadow: "3px 3px 3px black",
+});
+
+const Btn = styled.button`
+  width: 20;
+  height: 40;
+  padding: 10px;
+  margin: 10px;
+  color: white;
+  background-color: black;
+  border: none;
+  font-size: 1em;
+  border-radius: 10%;
+  font-weight: 700;
+`;
+
+const Title = styled.h1`
+  margin: auto;
+  text-align: center;
+`;
+
+const Number = styled.h2`
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+`;
 
 const Kimoo = () => {
-  return <Container>김우일ddddㅇㅇㅇㅇ</Container>;
+  const [cnt, setCnt] = React.useState(0);
+
+  const plus = () => {
+    setCnt((x) => x + 1);
+  };
+
+  const makeZero = () => {
+    setCnt((x) => (x = 0));
+  };
+
+  return (
+    <React.Fragment>
+      <Header />
+      <Container>
+        <Title>숫자 세기</Title>
+        <Number>{cnt}</Number>
+        <Btn onClick={plus}>누르세요!</Btn>
+        <Btn onClick={makeZero}>0으로</Btn>
+      </Container>
+    </React.Fragment>
+  );
 };
 
 export default Kimoo;
