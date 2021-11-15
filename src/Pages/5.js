@@ -10,7 +10,7 @@ const Container = styled.div`
   grid-template-rows: auto 1fr;
   justify-items: center;
   align-items: center;
-  background: url("https://source.unsplash.com/random/1920*1080?people");
+  background: url("https://source.unsplash.com/random/1920*1080?city");
   background-size: cover;
   background-position: center;
 `
