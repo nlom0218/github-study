@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import Header from "../Components/Header";
-import Weather from "../Components/Weather";
 
 // const Container = styled.div({
 //   // display: "flex",
@@ -75,7 +74,6 @@ const Kimoo = () => {
         <Btn onClick={makeZero}>0</Btn>
         <Btn onClick={minus}>-</Btn>
       </Container>
-      <Weather />
     </React.Fragment>
   );
 };
