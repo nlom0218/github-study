@@ -17,8 +17,11 @@ class Weather extends React.Component {
     this.setState({ weather: data });
   };
 
-  render() {
+  componentDidMount() {
     this.getWeather();
+  }
+
+  render() {
     const { weather } = this.state;
     return <h1>서울의 날씨는 : {weather}</h1>;
   }
