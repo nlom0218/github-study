@@ -18,7 +18,6 @@ const Home = () => {
       <Link to="/3">티코 선생님</Link>
       <Link to="/4">조은 선생님</Link>
       <Link to="/5">크리링 선생님</Link>
-      <Hello />
     </ Container>
   );
 }
