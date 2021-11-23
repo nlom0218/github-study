@@ -1,12 +1,14 @@
 import React from 'react';
+import CreateUser from '../Components/CreateUser';
 import SeeUser from '../Components/SeeUser';
 import { BasicContainer } from './BasicConainer';
 
 const Hello = () => {
   return (
-    <BasicContainer>
+    <div>
       <SeeUser />
-    </BasicContainer>
+      <CreateUser />
+    </div>
   );
 }
 
