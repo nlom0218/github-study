@@ -29,7 +29,7 @@ const SeeUser = () => {
     {!loading && data.seeUser.map((user, index) => {
       return <User key={index}>
         <div>email: {user.email}</div>
-        <DelBtn />
+        <DelBtn email={user.email} />
       </User>
     })}
   </UserList>);
