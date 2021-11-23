@@ -8,6 +8,7 @@ const CREATE_USER_MUTATION = gql`
   mutation CreateUser($email: String!, $password: String!) {
     createUser(email: $email, password: $password) {
       ok
+      error
     }
   }
 `
@@ -25,8 +26,13 @@ const Container = styled.form`
 `
 
 const InputBtn = styled.input`
+  margin-bottom: 20px;
   opacity: ${props => props.isValid ? 1 : 0.6};
   transition: opacity 0.6s ease;
+`
+
+const Msg = styled.div`
+  color: tomato;
 `
 
 const CreateUser = () => {
@@ -35,9 +41,12 @@ const CreateUser = () => {
     mode: "onChange"
   })
   const onCompleted = (result) => {
-    const { createUser: { ok } } = result
+    const { createUser: { ok, error } } = result
+    console.log(error);
     if (ok) {
       setMsg("회원가입이 완료 되었습니다.")
+    } else {
+      setMsg(error)
     }
   }
   const [createUser, { loading }] = useMutation(CREATE_USER_MUTATION, {
@@ -45,7 +54,9 @@ const CreateUser = () => {
   })
   const onSubmit = (data) => {
     const { email, password } = data
-    console.log(email, password);
+    if (loading) {
+      return
+    }
     createUser({
       variables: {
         email,
@@ -54,7 +65,7 @@ const CreateUser = () => {
     })
   }
   return (<Container onSubmit={handleSubmit(onSubmit)}>
-    <div>계정생성</div>
+    <div>회원가입</div>
     <input
       {...register("email", {
         required: true
@@ -76,7 +87,7 @@ const CreateUser = () => {
       value="회원가입"
       isValid={isValid}
     />
-    {msg && <div>{msg}</div>}
+    {msg && <Msg>{msg}</Msg>}
   </Container>);
 }
 
