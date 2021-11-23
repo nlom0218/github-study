@@ -17,7 +17,7 @@ const SDelBtn = styled.div`
   margin-left: 10px;
 `
 
-const DelBtn = ({ email }) => {
+const DelBtn = ({ email, refetch }) => {
   const [deleteUser, { loading }] = useMutation(DELETE_USER_MUTATION)
   const onClickDelBtn = () => {
     if (loading) {
@@ -28,6 +28,7 @@ const DelBtn = ({ email }) => {
         email
       }
     })
+    refetch()
   }
   return (<SDelBtn onClick={onClickDelBtn}>
     <FcFullTrash />

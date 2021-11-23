@@ -35,19 +35,21 @@ const Msg = styled.div`
   color: tomato;
 `
 
-const CreateUser = () => {
+const CreateUser = ({ refetch }) => {
   const [msg, setMsg] = useState(undefined)
-  const { register, formState: { isValid }, getValues, handleSubmit } = useForm({
+  const { register, formState: { isValid }, setValue, handleSubmit } = useForm({
     mode: "onChange"
   })
   const onCompleted = (result) => {
     const { createUser: { ok, error } } = result
-    console.log(error);
     if (ok) {
       setMsg("회원가입이 완료 되었습니다.")
     } else {
       setMsg(error)
     }
+    refetch()
+    setValue("email", "")
+    setValue("password", "")
   }
   const [createUser, { loading }] = useMutation(CREATE_USER_MUTATION, {
     onCompleted
