@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Header from '../Components/Header';
+import Hello from './5';
 
 const Container = styled.div`
   display: flex;
